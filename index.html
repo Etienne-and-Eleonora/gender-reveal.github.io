@@ -41,12 +41,13 @@ html, body {
   z-index: 100;
 }
 .languageSelector img {
-  width: 32px;
-  height: 32px;
-  cursor: pointer;
+  width: 36px;
+  height: 24px; /* ratio 3:2 */
+  object-fit: cover;
   border-radius: 4px;
   border: 2px solid transparent;
   transition: 0.2s;
+  cursor: pointer;
 }
 .languageSelector img.active {
   border-color: var(--noir);
