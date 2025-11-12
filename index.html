@@ -17,18 +17,23 @@
 }
 
 /* BODY */
+/* BODY */
 html, body {
-  height:100%;
-  margin:0;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;                  /* assure un fond plein écran */
+  height: auto;                      /* permet le scroll */
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   background: linear-gradient(to right, var(--bleu), var(--rose)); /* Dégradé horizontal bleu→rose */
   color: var(--noir);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;            /* empile verticalement */
+  align-items: center;               /* centre horizontalement */
+  justify-content: flex-start;       /* aligne le contenu en haut */
   padding: 20px;
   box-sizing: border-box;
   position: relative;
+  overflow-y: auto;                  /* permet de scroller si nécessaire */
 }
 
 /* LANGUAGE SELECT */
@@ -62,6 +67,9 @@ html, body {
   box-shadow: 0 10px 40px rgba(200,200,200,0.4);
   padding: 18px;
   overflow: hidden;
+
+  /* Ajout pour un meilleur rendu sur mobile */
+  margin: 40px auto;                /* espace en haut et en bas */
 }
 
 /* HEADER */
